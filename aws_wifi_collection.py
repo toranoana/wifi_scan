@@ -6,7 +6,7 @@ from scapy.all import *
 
 
 def packet_callback(packet):
-    if  packet.type == 0 and packet.subtype == 4:
+    if packet.type == 0 and packet.subtype == 4:
         print(str(packet.addr2 or '' )  + str(packet.info or '' ))
         now = datetime.now()
         data = {"datetime": now.strftime('%Y-%m-%d  %H:%M:%S'),\
